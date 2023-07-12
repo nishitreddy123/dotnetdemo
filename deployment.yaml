@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nishu-deployment
+  labels:
+    app: nishu
+    namespace: ty
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nishu
+  template:
+    metadata:
+      labels:
+        app: nishu
+    spec:
+      containers:
+      - name: nishu
+        image: nishitreddy123/nishu:1.0.2
+        ports:
+        - containerPort: 80

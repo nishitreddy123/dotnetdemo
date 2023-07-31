@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: killer 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: killer
+  template:
+    metadata:
+      labels:
+        app: killer 
+    spec:
+      containers:
+        - name: killer 
+          image: hypereal.azurecr.io/killer
+          ports:
+          - containerPort: 5000

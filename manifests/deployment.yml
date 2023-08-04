@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: dotnet 
-          image: hypereal.azurecr.io/killer
+          image: hypereal.azurecr.io/dockerimage
           ports:
           - containerPort: 5000

@@ -1,19 +1,19 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: killer 
+  name: dotnet 
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: killer
+      app: dotnet
   template:
     metadata:
       labels:
-        app: killer 
+        app: dotnet 
     spec:
       containers:
-        - name: killer 
-          image: hypereal.azurecr.io/killer:latest
+        - name: dotnet 
+          image: hypereal.azurecr.io/killer
           ports:
           - containerPort: 5000
